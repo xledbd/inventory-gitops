@@ -1,0 +1,37 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      app.openshift.io/vcs-url: <<unknown>>
+      app.quarkus.io/build-timestamp: 2024-07-22 - 13:43:52 +0000
+      app.quarkus.io/commit-id: 86e03ceb9fdac60851acdde3e06fe2fc8fb22fc9
+    labels:
+      app: inventory
+      app.kubernetes.io/instance: inventory
+      app.kubernetes.io/name: inventory-coolstore
+      app.kubernetes.io/part-of: coolstore
+      app.kubernetes.io/version: 1.0.0-SNAPSHOT
+      app.openshift.io/runtime: quarkus
+      component: inventory
+    name: inventory-coolstore
+  spec:
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: inventory
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
