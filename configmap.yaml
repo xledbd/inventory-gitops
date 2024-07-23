@@ -3,7 +3,7 @@ items:
 - apiVersion: v1
   data:
     application.properties: |
-      quarkus.datasource.jdbc.url=jdbc:mariadb://inventory-mariadb.inner-loop.svc:3306/inventorydb
+      quarkus.datasource.jdbc.url=jdbc:mariadb://inventory-mariadb.coolstore-staging.svc:3306/inventorydb
       quarkus.datasource.username=inventory
       quarkus.datasource.password=inventory
   kind: ConfigMap
